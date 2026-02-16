@@ -143,11 +143,116 @@ img { max-width: 100%; height: auto; }
 .option-card .opt-total { margin-top:12px; font-size:.85em; color:#555; background:#f8f8f8; padding:8px; border-radius:8px; }
 
 /* ===== RESPONSIVE ===== */
+html, body { overflow-x: hidden; }
+
 @media (max-width:768px) {
-  .cover h1 { font-size:2em; }
-  .product-grid, .machine-grid, .concept-cards, .option-grid { grid-template-columns:1fr; }
-  .section { padding:50px 20px; }
+  /* --- Cover --- */
+  .cover { padding:40px 16px; min-height:80vh; }
+  .cover h1 { font-size:1.6em; letter-spacing:1px; }
+  .cover .subtitle { font-size:.9em; margin-bottom:30px; }
+  .cover .client-box { padding:14px 20px; font-size:1em; letter-spacing:1px; }
+  .cover-badge { font-size:.75em; padding:6px 20px; }
+  .cover .date { margin-top:25px; }
+
+  /* --- Concept --- */
+  .concept { padding:50px 16px; }
+  .concept h2 { font-size:1.3em; }
+  .concept p { font-size:.88em; margin-bottom:25px; }
+  .concept-cards { grid-template-columns:1fr; gap:12px; }
+  .concept-card { padding:20px 16px; }
+  .concept-card .num { font-size:2.2em; }
+  .concept-card .label { font-size:.95em; }
+
+  /* --- Section / Product --- */
+  .section { padding:40px 14px; }
+  .product-header { gap:12px; margin-bottom:20px; }
+  .product-num { width:45px; height:45px; font-size:1.2em; }
+  .product-title { font-size:1.25em; }
+  .product-tagline { font-size:.85em; }
+  .product-badge { font-size:.7em; padding:4px 12px; }
+  .product-grid { grid-template-columns:1fr; gap:20px; }
+
+  /* --- Selling points / Spec --- */
+  .selling-points li { padding:10px 12px; font-size:.82em; }
+  .spec-table th, .spec-table td { padding:8px 10px; font-size:.78em; }
+  .spec-table th { width:30%; }
+
+  /* --- Price box --- */
+  .price-box { padding:18px 14px; }
+  .price-box .price { font-size:1.8em; }
+  .price-box .label { font-size:.78em; }
+  .price-box .note { font-size:.72em; }
+  .price-breakdown { font-size:.68em; flex-wrap:wrap; }
+
+  /* --- Trend --- */
+  .trend-box { flex-direction:column; padding:14px 14px; gap:8px; }
+  .trend-icon { font-size:1.4em; }
+  .trend-text { font-size:.8em; }
+
+  /* --- Images --- */
+  .img-caption { font-size:.7em; }
+  .img-row { gap:8px; }
+
+  /* --- Divider --- */
+  .divider { margin:0 14px; }
+
+  /* --- Machine --- */
+  .machine-section { padding:50px 16px; }
+  .machine-section h2 { font-size:1.3em !important; margin-bottom:30px !important; }
+  .machine-grid { grid-template-columns:1fr; gap:25px; }
+  .machine-grid img { max-width:220px; margin:0 auto; display:block; }
+  .machine-spec th, .machine-spec td { padding:8px 10px; font-size:.78em; }
+  .price-box-gold { padding:18px 14px; }
+  .price-box-gold .price { font-size:1.6em; }
+
+  /* --- Cost section --- */
+  .cost-section h2 { font-size:1.3em; }
+  .cost-section .lead { font-size:.8em; margin-bottom:25px; }
+  .cost-section h3 { font-size:.92em; margin:25px 0 10px; }
+
+  /* --- Option cards --- */
+  .option-grid { grid-template-columns:1fr; gap:10px; margin:15px 0; }
+  .option-card { padding:16px 14px; }
+  .option-card .opt-name { font-size:.88em; }
+  .option-card .opt-retail { font-size:.72em; }
+  .option-card .opt-price { font-size:1.4em; }
+  .option-card .opt-total { font-size:.78em; }
+
+  /* --- Cost tables (horizontal scroll prevention) --- */
+  .cost-table { font-size:.75em; }
+  .cost-table thead th { padding:10px 8px; font-size:.75em; white-space:nowrap; }
+  .cost-table tbody td { padding:9px 8px; font-size:.78em; word-break:break-all; }
+
+  /* --- Initial box --- */
+  .initial-box { padding:16px 14px; }
+  .initial-box h4 { font-size:.88em; }
+  .initial-table td { font-size:.78em; padding:6px 0; }
+  .initial-table .note-cell { font-size:.7em; }
+
+  /* --- Summary box --- */
+  .summary-box { padding:18px 14px; }
+  .summary-box h3 { font-size:.95em; }
+  .summary-row { font-size:.8em; gap:8px; }
+  .summary-row span { min-width:0; }
+  .summary-total { font-size:.9em; }
+  .summary-total .val { font-size:1.2em; }
+  .summary-notes { font-size:.72em; line-height:1.8; }
+
+  /* --- Footer --- */
+  .footer { padding:25px 16px; font-size:.75em; }
 }
+
+/* Extra small screens */
+@media (max-width:380px) {
+  .cover h1 { font-size:1.3em; }
+  .cover .client-box { padding:10px 14px; font-size:.88em; }
+  .product-title { font-size:1.1em; }
+  .price-box .price { font-size:1.5em; }
+  .option-card .opt-price { font-size:1.2em; }
+  .cost-table thead th, .cost-table tbody td { padding:7px 5px; font-size:.68em; }
+  .summary-total .val { font-size:1.05em; }
+}
+
 @media print {
   .cover { min-height:auto; padding:60px 40px; }
   .concept, .machine-section { padding:40px; }
