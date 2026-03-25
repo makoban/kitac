@@ -258,23 +258,7 @@ html, body { overflow-x: hidden; }
   .concept, .machine-section { padding:40px; }
 }
 
-/* ===== TAB UI ===== */
-.tab-nav {
-  display: flex; position: sticky; top: 0; z-index: 1000;
-  background: #fff; box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-}
-.tab-link {
-  flex: 1; padding: 15px 10px; text-align: center; font-weight: 700; cursor: pointer;
-  border-bottom: 4px solid #eee; color: #888; transition: all 0.2s; font-size: 1.1em;
-}
-.tab-link:hover { background: #f9f9f9; }
-.tab-link.active {
-  border-color: #cc0033; color: #cc0033; background: #fffcfc;
-}
-.tab-pane { display: none; animation: fadeIn 0.4s; }
-.tab-pane.active { display: block; }
-
-/* Flowchart Styles for Tab 2 */
+/* Flowchart Styles for Flow */
 .tab2-container { max-width: 1100px; margin: 0 auto; padding: 40px; }
 .tab2-header { color: #1a1a2e; border-bottom: 3px solid #cc0033; padding-bottom: 15px; margin-bottom: 40px; font-size: 2em; text-align: center; }
 .flow-box { display: flex; flex-wrap: wrap; align-items: center; justify-content: center; gap: 15px; margin: 30px 0 50px; background: white; padding: 25px; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); }
@@ -308,13 +292,6 @@ html, body { overflow-x: hidden; }
 </head>
 <body>
 
-<!-- ===== TAB NAVIGATION ===== -->
-<div class="tab-nav">
-  <div class="tab-link active" onclick="switchTab('tab-proposal', this)">企画・ご提案書</div>
-  <div class="tab-link" onclick="switchTab('tab-machine', this)">筐体販売・商流推移</div>
-</div>
-
-<div id="tab-proposal" class="tab-pane active">
 <!-- ===== COVER ===== -->
 <div class="cover">
   <div class="cover-badge">CONFIDENTIAL</div>
@@ -539,12 +516,6 @@ html, body { overflow-x: hidden; }
   </div>
 </div>
 
-
-
-</div> <!-- End tab-proposal -->
-
-<!-- ===== TAB 2: MACHINE FLOW ===== -->
-<div id="tab-machine" class="tab-pane">
   <div class="tab2-container">
     <h1 class="tab2-header">筐体販売・商流推移・お見積り</h1>
     
@@ -653,24 +624,5 @@ html, body { overflow-x: hidden; }
     </div>
 
   </div>
-</div> <!-- End tab-machine -->
-
-<script>
-function switchTab(tabId, element) {
-  // Hide all panes
-  document.querySelectorAll('.tab-pane').forEach(function(pane) {
-    pane.classList.remove('active');
-  });
-  // Deactivate all links
-  document.querySelectorAll('.tab-link').forEach(function(link) {
-    link.classList.remove('active');
-  });
-  // Activate selected
-  document.getElementById(tabId).classList.add('active');
-  element.classList.add('active');
-  window.scrollTo(0, 0);
-}
-</script>
-
 </body>
 </html>
